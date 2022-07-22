@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="sq_Login_Acme" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,2170" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="sq_Login_Acme" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,2608" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
       <x:String>System.Activities</x:String>
@@ -38,7 +38,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -77,28 +77,43 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Abre o site Acme, verifica se esta logado, caso nao esteja, efetua o login, retirando o Email e a Senha de um asset no orchestrator" DisplayName="sq_Login_Acme" sap:VirtualizedContainerService.HintSize="538,2105" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Abre o site Acme, verifica se esta logado, caso nao esteja, efetua o login, retirando o Email e a Senha de um asset no orchestrator" DisplayName="sq_Login_Acme" sap:VirtualizedContainerService.HintSize="538,2543" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" sap2010:Annotation.AnnotationText="" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME" sap:VirtualizedContainerService.HintSize="496,1971" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b7da6f2e-d359-4131-b3b7-bd4d5e735f49" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Iniciando workflow Login"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" sap2010:Annotation.AnnotationText="" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: ACME" sap:VirtualizedContainerService.HintSize="496,2263" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b7da6f2e-d359-4131-b3b7-bd4d5e735f49" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="462,1724" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="462,2016" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Verifica se existe o work itens, se nao existir realiza o login, caso exista nao realiza nada nesse workflow, pois o usuario ja esta logado" DisplayName="Check App State - Work Items" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="420,1630" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b7da6f2e-d359-4131-b3b7-bd4d5e735f49" Timeout="5" Version="V1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="420,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Verificando se o usuario esta logado."</mca:CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Verifica se existe o work itens, se nao existir realiza o login, caso exista nao realiza nada nesse workflow, pois o usuario ja esta logado" DisplayName="Check App State - Work Items" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="420,1776" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b7da6f2e-d359-4131-b3b7-bd4d5e735f49" Timeout="5" Version="V1">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -109,7 +124,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="376,1372" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="376,1518" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="var_strEmail" />
                     <Variable x:TypeArguments="ss:SecureString" Name="var_secSenha" />
@@ -119,6 +134,13 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"O usuario não esta logado. Iniciando etapa de login."</mca:CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                  </ui:LogMessage>
                   <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Buscando o texto &quot;Login&quot; para verificar se esta na pagina correta" DisplayName="Find Element - Login" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                     <ui:WaitUiElementAppear.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d0d666c7-8a42-49f5-b720-75d5089b4ed0" InformativeScreenshot="fbf6a556456bc9bcccec097df7c13dda" Selector="&lt;webctrl tag='H1' /&gt;">
@@ -152,7 +174,7 @@
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" DesignTimeRectangle="468, 421, 485, 34" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='form-control ' aaname='Email:' /&gt;" Guid="49ebe9ad-2c4f-4b24-875a-894b211f564c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANkSURBVHhe7d3LThNhHIbx72q9CbfGO2Fn1OiOhV6CaDiEgBxTkkKZQqEc5tC/39N2CMYVJnRm8fySV0hp3T6ZdmaapuUsJg9NFHd1jKZNDG/qOJvUcXpVxfG4jKNxFYdFGQdFlVfG70vnnHPO/c/oKD2lq/SVztJbukt/6TA9psv0OS0C3cT5LXGu4iQ/+TC/cD//Z3ujMnYvytg5f4ztYV7+uZV/Ouecc+7lo6P0lK7SVzpLb+ku/aXD9Jgu0+dEsXlgkP+wmV+4tjGJt+ujePNp6JxzzrkVjO7SXzpMjxehriNxaE25+cO7b6P48LOI3UERReGcc865VYzu0l86TI/pMn1OvAfOITYF5wn39/dR13U0TROz2cw555xzrzh6S3fp78df49zj63mX6XPiw2reC+dQ+2g0nb9AkiStFv2lw/SYLtPnxFllfGjNe+KUXJIkdYMO02O6TJ8Tp39zdhkPcsgtSZK6QYfpMV2mz4nrtDgNnAd9q1uSpO7QYXpMl+lz4oJqrtcy0pIkdauNNF2mz4m7n3BhtZGWJKlbbaTpMn1eRNojaUmSOvcU6dzlp0hzqzIjLUlSt9pI0+V5pLnht5GWJKl7zyNNn420JEk9YaQlSeopIy1JUk8ZaUmSespIS5LUU0ZakqSeMtKSJPWUkZYkqaeMtCRJPWWkJUnqKSMtSVJP/RNpv2BDkqR+eB7pp2/B8qsqJUnqXhvpv76qki+XNtKSJHXrKdLtkfRh/mfHI2lJkjrXRpou0+d0NK5i96I00pIkdayNNF2mz+l4XMbeyEhLktS1NtJ0mT6n06sq9i+NtCRJXWsjTZfpczqb1HGYD6nfro9icF0unyZJklaNDtNjukyf0/CmjpNc67WNSXzemiyfJkmSVu3L9k2s/bied5k+p9G0ybWuYnP4GO+/X8bXndtc8mr5dEmS9NroLv2lw/SYLtPnVNzVcX5bx2AZagrOoTbviTvnnHPu9Ud36S8dpsd0mT6nyUOTf2nmD1BuDrF5L5wPrTm7jNPAuV6LC6u5Awq3KnPOOefcy0dH6Sldpa90lt7SXfpLhxeBboI+p2k5m/9CsTm05j1wPqzmrDJO/+Y6LS6oPiiq+d1PuOG3c845514+OkpP6Sp9pbP0lu7SXzpMj+nytJzFHxHp4oCTOkQAAAAAAElFTkSuQmCC" InformativeScreenshot="ca7bceb1bc419c033da16338cefb40cd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="468, 396, 42, 20" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' check:innerText='Email:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAYCAYAAACFms+HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVFhH7ZMJcoQgEEW5k9fiKJyGo3gNk1S2WXTQTjfhm4EZEkuNIVV21WO3eSIq+qexi28du/jWsYtvHVfiNZmqoiqDtk1Yt240Vkf5034u/lw8jQXihlu5aMhqWaPJWpO8FOZuc0BmRFteHc9lT7wO+5jYaqZ4iiadjmMjbJyQE10gfg8+YZ/nSxyJaxPW4BSx0dWpRpGI/CieiZni6N/ZqLGk5ZlUHONgffGJd3yqePqpf+/E1xXHVYI31m90VRi/0XzxG6aKL/s5mZnicV55Djk+v+wi8WH4BpkvEJUK9lwAjJWIkgKSEHZcOKnRBhgrAC8+SnF96Yk67qDupGZabpeEYrw0JNvLQOfAKXDsGKnRLgA1CnPtJZkDT7y3Pb21g+f13NNLQNoloHDC8haQFcHnU09PR0ePwsHRQ6ApAkcfDeF6F9IOAvYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -173,7 +195,7 @@
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" DesignTimeRectangle="468, 495, 485, 34" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control ' aaname='Password:' /&gt;" Guid="6db27049-9f7f-4b90-93e7-a443c6cc7b0e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVHhe7dixqsJAFEXR9//fZhm01MI0FmKjElDnccQELSxNbrEWnCIZrTeTvwYAlCTSAFDUR6SHYWh937eu69pqtTIzM7MZlu6mv+nwuynSOViv12273bbD4dCOx6OZmZnNsHQ3/U2H30M9RToF3+127Xq9ttvt1u73e3s8HmZmZvbDpbfpbvqbDqfHoynSuWqfTqfnHwCAeaW/6XB6PJoinW/iKTkAsIx0OD0efUQ6V24AYBnp8NdI+9QNAMtJh0UaAAoSaQAoSqQBoCiRBoCiRBoAihJpAChKpAGgKJEGgKJEGgCKEmkAKEqkAaAokQaAokQaAIoSaQAoSqQBoCiRBoCiRBoAihJpAChKpAGgKJEGgKJEGgCKEmkAKEqkAaCor5Huuq6dz+fXEwAwt3Q4PR5Nke77vu33+9cTADC3dDg9Hk2RHoahbTab5+Hlcnm9BQB+Ld1Nf9Ph9Hg0RTpykB/lqp1v4mZmZvb7pbvp73ug4yPSAEAdIg0AJbX2DzLEeqPVoM8aAAAAAElFTkSuQmCC" InformativeScreenshot="a97939a209d65e92c3849fb99c91f1c9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="468, 470, 71, 20" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' check:innerText='Password:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAYCAYAAACyVACzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGfSURBVFhH7ZTtbcQgDIa7U9ZiFKZhlKyRIWg4/Bpj4IhbVapOfiX/uPP3A+Qrux7LYRnksAxyWAY5LIMclkEOyyAB68zxOPIxsZAuivlEXTmFsme8CbzXI1jFPhfYr2CppDNWYBH/jlDZVYR4WEj3OEJL/9j/jDWmHRTFIOdKOaBOsW6Qlh8jetbaVwqcE9I5whp2rjLCwilooxw9PAxNN/66XMiVjegFODTLC96qljgcwGIrffRhsf0I1txUHgkL0YJYYB689y9h1EUkzPHWNbgoz7C4X4vhPO6jLslEj2DNdutPbXIbyNoyRRu/hEng8ITiidyy1PtXgJqYsc0/y5N132v/DDuhsIaD35ACr79bS38bPL4WvWchgOGG1m7lYsF/BQsnz8shR8OCVjCh0S8/vrUPYqphccszbLBaDOfh+/RnsAajZbmxMsDd+YtED31DutlWs4haI6xbqxlkbcR0ieZnWGYUJ1+KUeHxpGCq3s7Pc4glkSOhFmlgarkprFv9DolumwmWayeHZZDDMshhGeSwDHJYBjmsx8r5G4PBXVC5Ber2AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
