@@ -1,7 +1,7 @@
 {
   "name": "prj_T2CGroup_ExtractWorkItens",
   "description": "Extração de uma tabela no item 'work itens' no site ACME, inserção dos dados em um arquivo .xlsx, exibição da quantidade de linhas total e pela coluna TYPE, envio de e-mail com o arquivo .xlsx",
-  "main": "Main.xaml",
+  "main": "WorkFlows\\Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
@@ -45,8 +45,8 @@
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "1b7618fd-4dd0-4e97-95d8-83c6a5aa8c2c",
+      "filePath": "WorkFlows\\Main.xaml",
+      "uniqueId": "31c51c2c-7599-4534-ae4d-ebce0ecb383f",
       "input": [],
       "output": []
     }
